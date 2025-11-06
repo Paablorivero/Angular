@@ -19,6 +19,4 @@ export class BlogComponente {
       fecha: "fecha"
     };
   }
-
-  getnombre()
 }
