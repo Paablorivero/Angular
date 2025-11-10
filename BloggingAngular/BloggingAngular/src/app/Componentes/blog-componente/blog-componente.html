@@ -1,7 +1,9 @@
 <div class="CrearNoticia">
     <h1>Introducir nueva noticia</h1>
     <p>Introduce el nombre de la noticia</p>
-    <input type="text">
+    <input type="text" placeholder="Introduce el nombre" (input)="crearNoticia($event)" />
+    <p>{{ texto }}</p>
+
     <p>Añade una imagen por url</p>
     <p>Escribe la noticia</p>
 </div>

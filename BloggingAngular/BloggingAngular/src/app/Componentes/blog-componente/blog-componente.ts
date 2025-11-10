@@ -9,14 +9,22 @@ import { noticiaInterfaz } from '../../interfaces/noticiaInterfaz';
 })
 export class BlogComponente {
 
-  @Input() noticia: noticiaInterfaz
+  texto: string;
+  //@Input() noticia: noticiaInterfaz
+  
 
   constructor(){
-    this.noticia = {
-      nombre: "Predeterminado",
-      imagen: "Predetermminado",
-      noticia: "noticia",
-      fecha: "fecha"
-    };
+    this.texto = "Hola";
+
+   // this.noticia = {
+    //  nombre: "Predeterminado",
+   //   imagen: "Predetermminado",
+   //   noticia: "noticia",
+    //  fecha: "fecha"
+   // };
+  }
+
+  crearNoticia(event : any):void{
+    this.texto = event.target.value;
   }
 }
