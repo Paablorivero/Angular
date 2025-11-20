@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { IProducto } from '../../Interfaces/iproducto';
 import { FormsModule } from '@angular/forms';
+import { ServicioProductos } from '../../Services/servicio-productos';
 
 @Component({
   selector: 'app-producto-componente',

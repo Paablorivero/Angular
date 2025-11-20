@@ -3,13 +3,11 @@
             @for(productos of listaProductos; track productos.sku; let i = $index){
                 <div class="card mb-3">
                     <!--Creamos una tarjeta para cada noticia-->
-                    <div class="card-body tarjetaNoticia">
-                        <div class="container">
+                        <div>
                         <h3>{{productos.title}}</h3>
-                        <p>{{productos.price}}</p>
+                        <p>{{productos.price}}€</p>
                         </div>
                         <p>{{productos.sku}}</p>
-                    </div>
                 </div>
             }
             @empty {<!--Mostramos un mensaje si el array no tiene elementos-->
