@@ -8,6 +8,29 @@
                         <p>{{productos.price}}€</p>
                         </div>
                         <p>{{productos.sku}}</p>
+    <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th colspan="4" class="text-center">Tabla fusionada</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <!--Añadimos la clase table-dark para dar color solo a la celda-->
+                    <th></th>
+                    <!--Añadimos colspan a la celda para que ocupe 2 de ancho y rowspan a la otra para que ocupe 2 de alto-->
+                    <td colspan="2">media</td>
+                    <td rowspan="2">Ojos Rojos</td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>altura</td>
+                    <td>peso</td>
+                </tr>
+            </tbody>
+    </table>
                 </div>
             }
             @empty {<!--Mostramos un mensaje si el array no tiene elementos-->
