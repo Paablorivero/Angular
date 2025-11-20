@@ -17,12 +17,16 @@ export class ServicioProductos {
 
     fetch('http://localhost:8080/api/carrito')
     .then(response => response.json())
-    .then(datos => {
-      this.currency = datos.currency;
-      datos.productos.array.forEach((prod:any) => { 
-        let producto = prod as IProducto;
-        this.productos.push(producto)
-        });
+    .then(data => {
+      this.currency = data.currency;
+      data.products.forEach((item: any) => {
+        let producto: IProducto = {
+          sku: item.sku,
+          title: item.title,
+          price: item.price,
+        };
+        this.productos.push(producto);
+      });
     });
   }
 
