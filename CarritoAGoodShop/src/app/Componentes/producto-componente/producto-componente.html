@@ -1,38 +1,11 @@
-<h1 class="mt-3">Productos</h1>
-            <hr>
-            @for(productos of listaProductos; track productos.sku; let i = $index){
-                <div class="card mb-3">
-                    <!--Creamos una tarjeta para cada noticia-->
-                        <div>
-                        <h3>{{productos.title}}</h3>
-                        <p>{{productos.price}}€</p>
-                        </div>
-                        <p>{{productos.sku}}</p>
-    <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th colspan="4" class="text-center">Tabla fusionada</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <!--Añadimos la clase table-dark para dar color solo a la celda-->
-                    <th></th>
-                    <!--Añadimos colspan a la celda para que ocupe 2 de ancho y rowspan a la otra para que ocupe 2 de alto-->
-                    <td colspan="2">media</td>
-                    <td rowspan="2">Ojos Rojos</td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td>altura</td>
-                    <td>peso</td>
-                </tr>
-            </tbody>
-    </table>
-                </div>
-            }
-            @empty {<!--Mostramos un mensaje si el array no tiene elementos-->
-                <h2>Todavia no hay Productos</h2>
-            }
+<!--Creamos una tarjeta para cada noticia-->
+@for(productos of listaProductos; track productos.sku; let i = $index){
+    <div class="card mb-3">
+        <h3>{{productos.title}}</h3>
+        <p>{{productos.price}}€</p>
+        <p>{{productos.sku}}</p>
+    </div>
+}
+@empty {<!--Mostramos un mensaje si el array no tiene elementos-->
+    <h2>Todavia no hay Productos</h2>
+}
