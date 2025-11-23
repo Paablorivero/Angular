@@ -1,6 +1,7 @@
 <!--Creamos una tarjeta para cada noticia-->
 @for(productos of listaProductos; track productos.sku; let i = $index){
     <div class="card mb-3">
+
         <h3>{{productos.title}}</h3>
         <p>{{productos.price}}€</p>
         <p>{{productos.sku}}</p>
