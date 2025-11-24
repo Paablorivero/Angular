@@ -8,29 +8,24 @@ import { IProducto } from '../Interfaces/iproducto';
 export class ServicioProductos {
   
   currency:string;
-  productos:IProducto[];
+  productosArray:IProducto[];
 
   constructor(){
 
     this.currency = "";
-    this.productos = [];
+    this.productosArray = [];
 
     fetch('http://localhost:8080/api/carrito')
     .then(response => response.json())
     .then(data => {
       this.currency = data.currency;
-      data.products.forEach((item: any) => {
-        let producto: IProducto = {
-          sku: item.sku,
-          title: item.title,
-          price: item.price,
-        };
-        this.productos.push(producto);
+      data.products.forEach((producto: IProducto) => {
+        this.productosArray.push(producto);
       });
     });
   }
 
   getAll(): IProducto[]{
-    return this.productos;
+    return this.productosArray;
   }
 }

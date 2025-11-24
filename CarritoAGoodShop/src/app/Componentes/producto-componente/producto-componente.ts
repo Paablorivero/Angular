@@ -1,25 +1,57 @@
-import { Component, inject } from '@angular/core';
+import { Component, Input, inject} from '@angular/core';
 import { IProducto } from '../../Interfaces/iproducto';
-import { FormsModule } from '@angular/forms';
-import { ServicioProductos } from '../../Services/servicio-productos';
+import { ServicioCarrito } from '../../Services/servicio-carrito';
 
 @Component({
   selector: 'app-producto-componente',
-  imports: [FormsModule],
+  imports: [],
   templateUrl: './producto-componente.html',
   styleUrl: './producto-componente.css',
 })
-export class ProductoComponente {
-  
-  ServicioProductos = inject(ServicioProductos);
 
-  listaProductos: IProducto[];
+export class ProductoComponente {
+
+  ServicioCarrito = inject(ServicioCarrito);
+
+  @Input() miProducto: IProducto;
+
+  cantidad! : number;
 
   constructor(){
-    this.listaProductos = [];
+    this.miProducto = {
+      sku : '',
+      title : '',
+      price : ''
+    }
   }
 
-  ngOnInit(): void{
-    this.listaProductos = this.ServicioProductos.getAll();
+  ngOnInit() : void {
+    this.cantidad = this.ServicioCarrito.getCantidadInicio();
+  }
+
+  sumarCantidad() {
+    this.cantidad++;
+    let productoCarrito = {
+      sku: this.miProducto.sku,
+      title: this.miProducto.title,
+      price: Number(this.miProducto.price),
+      cantidad: this.cantidad
+    };
+    this.ServicioCarrito.addProducto(productoCarrito);
+  } 
+
+  restarCantidad() {
+    if(this.cantidad > 0){
+      this.cantidad--;
+    }
+
+    let productoCarrito = {
+      sku: this.miProducto.sku,
+      title: this.miProducto.title,
+      price: Number(this.miProducto.price),
+      cantidad: this.cantidad
+    };
+    this.ServicioCarrito.removeProducto(productoCarrito);
+
   }
 }

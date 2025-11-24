@@ -1,26 +1,25 @@
-import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { IProducto } from './../../Interfaces/iproducto';
-import { ServicioProductos } from '../../Services/servicio-productos';
-import { ProductoComponente } from "../producto-componente/producto-componente";
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-carrito-componente',
-  imports: [FormsModule, ProductoComponente],
+  imports: [],
   templateUrl: './carrito-componente.html',
   styleUrl: './carrito-componente.css',
 })
 export class CarritoComponente {
 
-  ServicioProductos = inject(ServicioProductos);
+  @Input() miCompra: any;
 
-  listaProductos: IProducto[];
+  carrito : any[];
 
   constructor(){
-    this.listaProductos = [];
-  }
+    this.carrito = [];
 
-  ngOnInit(): void{
-    this.listaProductos = this.ServicioProductos.getAll();
+    this.miCompra = {
+      sku : '',
+      title : '',
+      price : '',
+      cantidad: ''
+    }
   }
 }

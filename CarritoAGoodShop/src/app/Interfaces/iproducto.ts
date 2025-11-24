@@ -1,5 +1,5 @@
 export interface IProducto {
     title: string,
-    price: number,
+    price: string,
     sku: string, 
 }

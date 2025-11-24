@@ -1,8 +1,25 @@
-<div class="row">
-    <div class="col-sm-8">
-        <app-carrito-componente></app-carrito-componente>
-    </div>
-    <div class="col-sm-4">
-        <h1>Total</h1>
+<div class="container">
+    <div class="row">
+        <!--Lista de Productos-->
+        <div class="col-sm-7">
+            <h2>Productos</h2>
+            @for (producto of listaProductos; track producto.sku) {
+                <app-producto-componente [miProducto]="producto"></app-producto-componente>
+            }
+            @empty {<!--Mostramos un mensaje si el array no tiene elementos-->
+                <h2>Todavia no hay Productos</h2>
+            }
+        </div>
+
+        <!--Espacio divisor-->
+        <div class="col-sm-1"></div>
+
+        <!--Resumen del total-->
+        <div class="col-sm-4">
+            <h1>Total</h1>
+            @for (productoSel of carrito; track productoSel.sku) {
+                <app-carrito-componente [miCompra] = "productoSel"></app-carrito-componente>
+            }
+        </div>
     </div>
 </div>
