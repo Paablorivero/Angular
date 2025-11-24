@@ -7,11 +7,12 @@ import { IProducto } from '../Interfaces/iproducto';
 
 export class ServicioProductos {
   
+  //Creamos una variable currency y un array de tipo Iproducto
   currency:string;
   productosArray:IProducto[];
 
+  //En el constructor cargamos los elementos de la api y añadimos los productos al array creado
   constructor(){
-
     this.currency = "";
     this.productosArray = [];
 
@@ -25,6 +26,7 @@ export class ServicioProductos {
     });
   }
 
+  //Con el array creado hacemos un metodo para acceder al array desde componentes
   getAll(): IProducto[]{
     return this.productosArray;
   }

@@ -8,13 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class CarritoComponente {
 
+  //Creamos un input para recibir los datos del carrito desde el componente padre
   @Input() miCompra: any;
 
-  carrito : any[];
-
+  //definimos el elemento con valores por defecto
   constructor(){
-    this.carrito = [];
-
     this.miCompra = {
       sku : '',
       title : '',
