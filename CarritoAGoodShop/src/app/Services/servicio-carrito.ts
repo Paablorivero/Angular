@@ -15,11 +15,13 @@ export class ServicioCarrito {
   //tambien una que almacene el precio total de la compra
   private total : number;
   private cantidadInicio;
+  actCantidad : number;
 
   constructor(){
     this.carrito = [];
     this.total = 0;
     this.cantidadInicio = 0;
+    this.actCantidad = 0;
   }
 
   //Creamos un metodo para acceder a la cantidad de inicio desde el componente
@@ -29,6 +31,7 @@ export class ServicioCarrito {
 
   //Metodo para añadir un producto al array de carrito
   addProducto(producto: any) : void{
+
     //Buscamos un producto por el valor del sku
     let prod = this.carrito.findIndex((p) => p.sku === producto.sku);
 
@@ -42,6 +45,7 @@ export class ServicioCarrito {
 
     //actualizamos el valor total añadiendole el precio del producto añadido a la cesta.
     this.total += producto.price;
+
   }
 
   //Metodo para eliminar producto del array de carrito
@@ -69,7 +73,11 @@ export class ServicioCarrito {
     return this.total;
   }
 
-  deleteCarrito() {
+  deleteCarrito(): void {
     this.carrito = [];
+    this.actCantidad = 0;
   }
+
+  
+  
 }

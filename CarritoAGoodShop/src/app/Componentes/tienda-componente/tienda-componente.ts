@@ -14,7 +14,6 @@ import { CarritoComponente } from '../carrito-componente/carrito-componente';
 
 export class TiendaComponente {
 
-
   //Injectamos los servicios para obtener tanto el array de productos  
   //como el carrito con los productos seleccionados
   ServicioProductos = inject(ServicioProductos);
@@ -36,12 +35,17 @@ export class TiendaComponente {
       price : '',
       sku : '',
     };
-}
+  }
 
   //Al iniciar añadimos la lista de productos y el carrito de los servicios a los arrays del componente
   ngOnInit(): void{
       this.listaProductos = this.ServicioProductos.getAll();
       this.carrito = this.ServicioCarrito.getCompra();
+  }
+
+  vaciarCarrito(): void {
+    this.ServicioCarrito.deleteCarrito();
+    this.carrito = this.ServicioCarrito.carrito;
   }
 }
 

@@ -25,21 +25,22 @@ export class ProductoComponente {
       title : '',
       price : ''
     }
+
   }
 
-  //Iniciamos la variable cantidad siempre a 0
-  ngOnInit() : void {
+  ngOnInit(): void {
     this.cantidad = this.ServicioCarrito.getCantidadInicio();
   }
 
   //Metodo para añadir un producto
   sumarCantidad() {
 
+    this.cantidad++;
+
     //Nos aseguramos que no hay mas de 99 (Es ejemplo, se puede cambiar por un numero mayor)
     if(this.cantidad < 99){
 
       //Sumamos 1 a la variable cantidad
-      this.cantidad++; 
 
       //creamos un elemento con los datos del producto ademas de la cantidad
       let productoCarrito = {
@@ -60,6 +61,7 @@ export class ProductoComponente {
   //Metodo para eliminar producto
   restarCantidad() {
 
+    
     //Nos aseguramos que minimo tengamos 1 producto
     if(this.cantidad > 0){
 
