@@ -5,6 +5,7 @@ import { Shop } from './pages/shop/shop';
 import { Libros } from './pages/libros/libros';
 import { Peliculas } from './pages/peliculas/peliculas';
 import { UltimasNovedades } from './pages/ultimas-novedades/ultimas-novedades';
+import { SaberMas } from './pages/saber-mas/saber-mas';
 
 export const routes: Routes = [
     {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {path: 'libros', component: Libros},
     {path: 'peliculas', component: Peliculas},
     {path: 'novedades', component:UltimasNovedades},
+    {path: 'sabermas', component:SaberMas},
 
     {path: '**', component: Page404}
 ];

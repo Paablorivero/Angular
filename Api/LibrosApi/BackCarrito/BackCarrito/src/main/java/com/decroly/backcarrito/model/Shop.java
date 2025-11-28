@@ -69,7 +69,7 @@ public class Shop
         return currency;
     }
 
-    public List<Libro> getProducts()
+    public List<Libro> getLibros()
     {
         return libros;
     }
