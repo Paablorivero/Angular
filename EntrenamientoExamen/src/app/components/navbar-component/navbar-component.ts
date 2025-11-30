@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { ServicioRol } from '../../services/servicio-rol';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-component',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar-component.html',
   styleUrl: './navbar-component.css',
 })
@@ -17,11 +18,9 @@ rol: string;
 
   admin(){
     this.rol = this.ServicioRol.cambiarAdmin();
-    console.log (this.rol);
   }
 
   usuario(){
     this.rol = this.ServicioRol.cambiarUsuario();
-    console.log(this.rol);
   }
 }

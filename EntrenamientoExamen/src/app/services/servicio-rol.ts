@@ -7,11 +7,7 @@ export class ServicioRol {
   rol: string;
 
   constructor(){
-    this.rol = ""
-  }
-
-  ngOnInit(){
-    this.rol = 'usuario'
+    this.rol = "usuario"
   }
 
   cambiarAdmin(): string{

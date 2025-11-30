@@ -56,7 +56,7 @@ export class ServicioCarrito {
     //si encuentra el producto actualizamos la cantidad restada en el componente y si es 0 eliminamos
     if(prod !== -1){
       this.carrito[prod].cantidad = producto.cantidad;
-      if(this.carrito[prod].cantidad ===0){
+      if(this.carrito[prod].cantidad === 0){
         this.carrito.splice(prod, 1);//si la cantidad es 0 eliminamos el elemento del array (posicion, cantidad)
       }
     }

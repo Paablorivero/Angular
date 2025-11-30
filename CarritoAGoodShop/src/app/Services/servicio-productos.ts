@@ -30,4 +30,13 @@ export class ServicioProductos {
   getAll(): IProducto[]{
     return this.productosArray;
   }
+
+  // fetch("https://peticiones.online/api/series")
+  //           .then(response => response.json())
+  //           .then(datos => {
+  //               datos.forEach((element: any) => {
+  //                   let serie = element as Iserie;
+  //                   this.arrSeries.push(serie);
+  //               });
+  //           });
 }

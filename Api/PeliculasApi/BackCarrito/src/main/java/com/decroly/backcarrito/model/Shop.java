@@ -27,7 +27,7 @@ public class Shop
         
         this.peliculas.add(new Pelicula(7, "Matrix", "Lana y Lilly Wachowski", 1999, "Ciencia Ficción/Acción", 8.7, "Un hacker descubre que la realidad que conoce es una simulación creada por máquinas inteligentes.", "https://m.media-amazon.com/images/I/51EG732BV3L._AC_.jpg"));
         
-        this.peliculas.add(new Pelicula(8, "Gladiador", "Ridley Scott", 2000, "Acción/Drama", 8.5, "Un general romano traicionado busca venganza como gladiador en el Coliseo.", "https://pics.filmaffinity.com/Gladiator-851958258-large.jpg"));
+        this.peliculas.add(new Pelicula(8, "Gladiador", "Ridley Scott", 2000, "Acción/Drama", 8.5, "Un general romano traicionado busca venganza como gladiador en el Coliseo.", "https://m.media-amazon.com/images/I/71KPWUDqRnL._AC_UF894,1000_QL80_.jpg"));
         
         this.peliculas.add(new Pelicula(9, "Interstellar", "Christopher Nolan", 2014, "Ciencia Ficción/Drama", 8.7, "Un grupo de exploradores espaciales viaja a través de un agujero de gusano para salvar a la humanidad.", "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_SY679_.jpg"));
         
@@ -41,11 +41,11 @@ public class Shop
         
         this.peliculas.add(new Pelicula(14, "Parásitos", "Bong Joon-ho", 2019, "Drama/Thriller", 8.5, "Una familia pobre se infiltra en la vida de una familia rica con consecuencias inesperadas.", "https://es.web.img3.acsta.net/pictures/19/09/17/17/13/3740579.jpg"));
         
-        this.peliculas.add(new Pelicula(15, "Joker", "Todd Phillips", 2019, "Drama/Crimen", 8.4, "El origen del icónico villano y su descenso hacia la locura en Gotham City.", "https://pics.filmaffinity.com/Joker-186831882-large.jpg"));
+        this.peliculas.add(new Pelicula(15, "Joker", "Todd Phillips", 2019, "Drama/Crimen", 8.4, "El origen del icónico villano y su descenso hacia la locura en Gotham City.", "https://www.tuposter.com/pub/media/catalog/product/cache/71d04d62b2100522587d43c930e8a36b/j/o/joker_portada_2019_poster.png"));
         
-        this.peliculas.add(new Pelicula(16, "Django Desencadenado", "Quentin Tarantino", 2012, "Western/Drama", 8.5, "Un esclavo liberado se une a un cazarrecompensas para rescatar a su esposa.", "https://pics.filmaffinity.com/Django_desencadenado-969283566-large.jpg"));
+        this.peliculas.add(new Pelicula(16, "Django Desencadenado", "Quentin Tarantino", 2012, "Western/Drama", 8.5, "Un esclavo liberado se une a un cazarrecompensas para rescatar a su esposa.", "https://es.web.img2.acsta.net/medias/nmedia/18/92/38/67/20383018.jpg"));
         
-        this.peliculas.add(new Pelicula(17, "Toy Story", "John Lasseter", 1995, "Animación/Aventura", 8.3, "Los juguetes de Andy cobran vida cuando los humanos no están presentes.", "https://pics.filmaffinity.com/Toy_Story-626273371-large.jpg"));
+        this.peliculas.add(new Pelicula(17, "Toy Story", "John Lasseter", 1995, "Animación/Aventura", 8.3, "Los juguetes de Andy cobran vida cuando los humanos no están presentes.", "https://cdn.shopify.com/s/files/1/0051/8845/2401/products/00719ToyStory_Blackstone__Rounded.png?v=1625840218"));
         
         this.peliculas.add(new Pelicula(18, "Coco", "Lee Unkrich", 2017, "Animación/Musical", 8.4, "Miguel viaja a la Tierra de los Muertos para descubrir la historia musical de su familia.", "https://pics.filmaffinity.com/Coco-155051069-large.jpg"));
         
