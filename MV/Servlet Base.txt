@@ -1,0 +1,69 @@
+-------------SERVLET------------------
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/MyServlet") 
+public class MyServlet extends HttpServlet {
+ private static final long serialVersionUID = 1L;
+
+
+ public MyServlet() {
+	 super();
+	 }
+ 
+	 /**
+	 * METODO doGET
+	 */
+	 protected void doGet(HttpServletRequest request, HttpServletResponse
+	response) throws ServletException, IOException {
+	 response.setContentType("text/html");
+	 PrintWriter out = response.getWriter();
+	 out.println("<h1>Message from doGet method from MyServlet</h1>");
+	 }
+	 
+	 /**
+	 * METODO doPOST
+	 */
+	 protected void doPost(HttpServletRequest request, HttpServletResponse
+	response) throws ServletException, IOException {
+
+	 response.setContentType("text/html");
+	 PrintWriter out = response.getWriter();
+	 out.println("<h1>Message from doPost method from MyServlet</h1>");
+	 }
+}
+
+
+
+
+-------------JSP(HTML)----------------------------------
+
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.Date"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Activity 3</title>
+</head>
+<body>
+ <p>Hello from the JSP file!</p>
+ <form action="MyServlet" method="GET">
+ <button type="submit">Get message</button>
+ </form>
+ <br>
+ <form action="MyServlet" method="POST">
+ <button type="submit">Post message</button>
+ </form>
+</body>
+</html>
